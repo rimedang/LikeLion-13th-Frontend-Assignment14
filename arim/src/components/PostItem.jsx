@@ -14,7 +14,7 @@ function PostItem({ user, onUpdate, onDelete }) {
       {isEditing ? (
         <>
           <input
-            value={editName}
+            value={editTitle}
             onChange={(e) => setEditTitle(e.target.value)}
           />
           <button onClick={handleSave}>저장</button>

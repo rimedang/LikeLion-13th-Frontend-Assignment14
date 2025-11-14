@@ -46,7 +46,7 @@ function PostPage() {
   };
 
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div className="App">
       <h1>유저 프로필 관리</h1>
       <PostForm onAdd={addUser} />
       <PostList
