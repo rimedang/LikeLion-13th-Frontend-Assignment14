@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 
 function PostForm({ onAdd }) {
-  const [title, setTitle] = useState('');
+  // 🚨 수정: 'title', 'setTitle'을 'name', 'setName'으로 변경
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // 이제 'name' 변수가 정상적으로 동작합니다.
     if (!name || !email) return;
     onAdd({ name, email });
     setName('');
@@ -18,8 +21,8 @@ function PostForm({ onAdd }) {
       <input
         type="text"
         placeholder="이름"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
+        value={name}
+        onChange={(e) => setName(e.target.value)}
       />
       <textarea
         placeholder="이메일"
